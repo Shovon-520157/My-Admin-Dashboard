@@ -1,0 +1,69 @@
+/*_______ Extra large screen _______*/
+@media screen and (max-width : 1200px) {
+    /*_______ header start _______*/
+    /*_______ header end _______*/
+}
+
+
+/*_______ Large screen _______*/
+@media screen and (max-width : 992px) {
+/*_______ side bar start start _______*/
+    .sidebar {
+        width: 0;
+    }
+/*_______ side bar start end _______*/
+
+/*_______ Main start _______*/
+    .main {
+        width: calc(100% - 0rem);
+        left: 0;
+    }
+/*_______ Main end _______*/
+
+/*_______ top bar start _______*/
+    .topbar {
+        padding: 1rem 2rem 1rem 2rem;
+    }
+    .topbar .toggle {
+        display: block;
+    }
+/*_______ top bar end _______*/
+
+/*_______ content start _______*/
+    .topcard .card {
+        display: block;
+        text-align: center;
+    }
+
+    .topcard .left .icon {
+        margin-bottom: 0.8rem;
+    }
+/*_______ content end _______*/
+}
+
+
+/*_______ Medium screen _______*/
+@media screen and (max-width : 768px) {
+/*_______ content start _______*/
+    .topcard {
+        padding: 0 5rem;
+    }
+    .topcard .item {
+        margin: 1.5rem 0;
+    }
+
+
+    /*________ product start ________*/
+    .product .col-sm-12 {
+        display: flex;
+        justify-content: center;
+    }
+    /*________ product end ________*/
+
+/*_______ content end _______*/
+}
+
+/*_______ Small screen _______*/
+@media screen and (max-width: 576px) {
+    
+}

@@ -1,0 +1,59 @@
+/*_______ add product start _______*/
+.add_product {/*
+    margin: 50px 0 0 0;
+    background: var(--white_100);*/
+}
+.add_product .col-6-border {
+	border-right: 1px solid var(--light-50);
+}
+.add_product .input-grp {
+    margin: 20px 0 0 0;
+}
+.add_product .input-grp select, .input-grp textarea {
+	background: var(--dark-100);
+	color: var(--light-50);
+	border: 1px solid var(--dark-50);
+    outline: none;
+    width: 100%;
+}
+.add_product .myBtn a {
+	color: var(--light-50);
+}
+/*_______ add product end _______*/
+
+
+/*________ product start ________*/
+.product .card {
+    width: 230px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-50);
+    background: var(--dark-80);
+    box-shadow: var(--box-shadow-1);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.product .card:hover {
+    transform: translateY(-0.8rem);
+}
+.product .card img {
+    width: 230px;
+    height: 160px;
+}
+.product .card-body {
+    text-align: ;
+}
+.product .card_store_name, .ratting {
+    padding: 0;
+    margin: 0;
+}
+.product .card_price {
+    color: var(--main_clr);
+    font-weight: bold;
+}
+.product .ratting i {
+    color: var(--gold);
+}
+/*________ product end ________*/

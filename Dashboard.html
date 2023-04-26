@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin Panel</title>
+	<!--==== css link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/sass.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/product.css">
+  <!--==== bootstrap link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap_css/bootstrap.min.css">
+  <!--==== font awesome link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/all.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/regular.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/fontawesome.css">
+  <!--=== Google icon ===-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body class="">
+	<!--=== side bar start start ===-->
+	<section class="sidebar">
+		<ul>
+			<li>
+				<a href="" class="brand">
+					<i class="fa-regular fa-face-smile icon"></i>
+					<span>Admin</span>
+				</a>
+			</li>
+			<li>
+				<a href="" class="active">Dashboard</a>
+			</li>
+
+			<li class="dropdown">
+				<a>Products <i class="fa-solid fa-chevron-right right-icon"></i></a>
+				<ul class="dropdown-item">
+					<li><a href="Add_products.html">Add Products</a></li>
+					<li><a href="Product.html">Preview</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a>Orders <i class="fa-solid fa-chevron-right right-icon"></i></a>
+				<ul class="dropdown-item">
+					<li><a href="Recent_order.html">Recent Orders</a></li>
+					<li><a href="Pending_order.html">Pending Orders</a></li>
+				</ul>
+			</li>
+
+			<li>
+				<a href="Customer.html">Customers</a>
+			</li>
+
+			<li class="dropdown">
+				<a>Statistics <i class="fa-solid fa-chevron-right right-icon"></i></a>
+				<ul class="dropdown-item">
+					<li><a href="">Sell</a></li>
+					<li><a href="">Earn</a></li>
+				</ul>
+			</li>
+
+			<li><a href="">Reviews</a></li>
+
+			<li><a href="">Transactions</a></li>
+
+			<li><a href="">Hot offers</a></li>
+
+			<hr>
+
+			<li class="dropdown">
+				<a>Appearance <i class="fa-solid fa-chevron-right right-icon"></i></a>
+				<ul class="dropdown-item">
+					<li><a href="">Color</a></li>
+					<li><a href="">Background</a></li>
+				</ul>
+			</li>
+
+			<li><a href="">Settings</a></li>
+		</ul>
+	</section>
+	<!--=== side bar start end ===-->
+
+	<!--=== Main start ===-->
+	<section class="main">
+		<!--=== Top bar start ===-->
+		<section class="topbar sticky-top">
+			<div class="toggle">
+				<span class="material-symbols-outlined icon">menu</span>
+			</div>
+			<div class="search-bar">
+				<label>
+					<input type="text" name="search" placeholder="Search here">
+					<i class="fa-solid fa-search icon"></i>search</span>
+				</label>
+			</div>
+			<div class="right d-flex align-items-center">
+				<i class="fa-solid fa-message icon" style="cursor:pointer;padding: 0 10px 0 10px;"></i>
+				<i class="fa-solid fa-bell icon" style="cursor:pointer;padding: 0 10px 0 10px;"></i>
+				<div class="profile d-flex align-items-center">
+					<img src="assets/images/user-avater.png">
+					<ul>
+						<li>
+							<a href="">
+								<i class="fa-solid fa-user icon" style="margin-right:8px;"></i>
+								<span>Profile</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="fa-solid fa-right-from-bracket icon" style="margin-right:8px;"></i>
+								<span>Logout</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!--=== Top bar end ===-->
+
+		<!--=== Content start ===-->
+		<section class="px-4 py-3">
+			<h2 class="page-title">Dashboard <span></span></h2>
+
+			<div class="topcard">
+				<div class="row">
+					<div class="col-md-4 col-sm-12 item">
+						<div class="card">
+							<div class="left">
+								<i class="fa-solid fa-tag icon"></i>
+							</div>
+							<div class="right">
+								<p>Total Sales</p>
+								<p>$ 10,0000</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-12 item">
+						<div class="card">
+							<div class="left">
+								<i class="fa-solid fa-cart-shopping icon"></i>
+							</div>
+							<div class="right">
+								<p>Total Orders</p>
+								<p>400</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-12 item">
+						<div class="card">
+							<div class="left">
+								<i class="fa-solid fa-dollar-sign icon"></i>
+							</div>
+							<div class="right">
+								<p>Balance</p>
+								<p>$ 500000</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="graphbox px-4">
+			<h2 class="content-title text-start">Earning Chart (2023)</h2>
+			
+			<div class="row">
+				<div class="col-sm-12 col-sm-my-5 col-md-4 item">
+					<div class="card mt-4">
+						<canvas id="earn_yearly"></canvas>						
+					</div>
+				</div>
+				<div class="col-sm-12 col-sm-my-5 col-md-8 item">
+					<div class="card mt-4">
+					  <canvas id="earn_monthly"></canvas>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="px-4 py-3">
+			<div class="latest-order">
+				<h2 class="page-title">Latest Order <span></span></h2>
+				
+				<div class="table-responsive">	
+					<table class="table">
+						<thead class="text-center">
+							<tr>
+								<th>Order No</th>
+								<th>Customer Name</th>
+								<th>Product Name</th>
+								<th>Price</th>
+								<th>Order Status</th>
+								<th>Delivery Time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>12341109</td>
+								<td>Al Jubair Shovon</td>
+								<td>kawasaki ninja h2r</td>
+								<td>4000000</td>
+								<td class="status text-center"><button class="green-bg">Processing</button></td>
+								<td>01:05:19</td>
+							</tr>
+							<tr>
+								<td>12341109</td>
+								<td>Al Jubair Shovon</td>
+								<td>Rolls-Royce Phantom</td>
+								<td>500000000</td>
+								<td class="status text-center"><button class="orrange-bg">Canceled</button></td>
+								<td>01:05:19</td>
+							</tr>
+							<tr>
+								<td>12341109</td>
+								<td>Al Jubair Shovon</td>
+								<td>kawasaki ninja h2r</td>
+								<td>500000</td>
+								<td class="status text-center"><button class="blue-bg">Delivered</button></td>
+								<td>01:05:19</td>
+							</tr>
+							<tr>
+								<td>12341109</td>
+								<td>Al Jubair Shovon</td>
+								<td>Rolls-Royce Phantom</td>
+								<td>1000000</td>
+								<td class="status text-center"><button class="orrange-bg">Canceled</button></td>
+								<td>01:05:19</td>
+							</tr>
+							<tr>
+								<td>12341109</td>
+								<td>Al Jubair Shovon</td>
+								<td>kawasaki ninja h2r</td>
+								<td>1000000</td>
+								<td class="status text-center"><button class="green-bg">Processing</button></td>
+								<td>01:05:19</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!--=== Content end ===-->
+
+
+		<div class="top_scroller_div" id="top_scroller_div">
+			<span class="material-symbols-outlined top_scroller">arrow_upward</span>
+	    </div>
+
+	</section>
+	<!--=== Main end ===-->
+
+
+	<script src="./assets/js/jquery-v3.6.1.js"></script>
+	<script src="./assets/js/bootstrap_js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+
+	<script src="./assets/js/custome.js"></script>
+	<script src="./assets/js/custome_jquery.js"></script>
+	<script src="./assets/js/chart.js"></script>
+</body>
+</html>

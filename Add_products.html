@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <!--==== css link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/sass.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/add_product.css">
+  <!--==== bootstrap link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap_css/bootstrap.min.css">
+  <!--==== font awesome link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/all.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/regular.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/fontawesome.css">
+  <!--=== Google icon ===-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body class="">
+  <!--=== side bar start start ===-->
+  <section class="sidebar">
+    <ul>
+      <li>
+        <a href="" class="brand">
+          <span class="material-symbols-outlined icon">sentiment_satisfied</span>
+          <span>Admin</span>
+        </a>
+      </li>
+      <li><a href="" class="active"> 
+          <span class="material-symbols-outlined icon">team_dashboard</span> Dashboard</a>
+      </li>
+
+      <li class="dropdown"><a>
+        <span class="material-symbols-outlined icon">inventory_2</span> Products <span class="material-symbols-outlined right-icon">expand_more</span></a>
+        <ul class="dropdown-item">
+          <li><a href="Add_products.html">
+            <span class="material-symbols-outlined icon">add</span> Add Products
+          </a></li>
+          <li><a href="Product.html">
+            <span class="material-symbols-outlined icon">preview</span> Preview
+          </a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown"><a> 
+        <span class="material-symbols-outlined icon">shopping_cart</span> Orders <span class="material-symbols-outlined right-icon">expand_more</span></a>
+        <ul class="dropdown-item">
+          <li><a href="">
+            <span class="material-symbols-outlined icon">add</span> Recent Orders
+          </a></li>
+          <li><a href="">
+            <span class="material-symbols-outlined icon">update</span> Pending Orders
+          </a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown"><a> 
+        <span class="material-symbols-outlined icon">group</span> Customers <span class="material-symbols-outlined right-icon">expand_more</span></a>
+        <ul class="dropdown-item">
+          <li><a href="">
+            <span class="material-symbols-outlined icon">add</span> New Customers
+          </a></li>
+          <li><a href="">
+            <span class="material-symbols-outlined icon">language</span> Regular Customers
+          </a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown"><a> 
+        <span class="material-symbols-outlined icon">monitoring</span> Statistics <span class="material-symbols-outlined right-icon">expand_more</span></a>
+        <ul class="dropdown-item">
+          <li><a href="">
+            <span class="material-symbols-outlined icon">sell</span> Sell
+          </a></li>
+          <li><a href="">
+            <span class="material-symbols-outlined icon">account_balance</span> Earn
+          </a></li>
+        </ul>
+      </li>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">reviews</span> Reviews</a>
+      </li>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">payments</span> Transactions</a>
+      </li>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">sell</span> Hot offers</a>
+      </li>
+
+      <hr>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">brush</span> Appearance <span class="material-symbols-outlined right-icon">expand_more</span></a>
+      </li>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">settings</span> Settings</a>
+      </li>
+    </ul>
+  </section>
+  <!--=== side bar start end ===-->
+
+  <!--=== Main start ===-->
+  <section class="main">
+    <!--=== Top bar start ===-->
+    <section class="topbar sticky-top ">
+      <div class="toggle">
+        <span class="material-symbols-outlined icon">menu</span>
+      </div>
+      <div class="search-bar">
+        <label>
+          <input type="text" name="search" placeholder="Search here">
+          <span class="material-symbols-outlined icon">search</span>
+        </label>
+      </div>
+      <div class="right d-flex align-items-center">
+        <span class="material-symbols-outlined icon" style="cursor:pointer;padding: 0 10px 0 10px;">sms</span>
+        <span class="material-symbols-outlined icon" style="cursor:pointer;padding: 0 10px 0 10px;">notifications</span>
+        <div class="profile d-flex align-items-center">
+          <img src="assets/images/user-avater.png">
+          <ul>
+            <li>
+              <a href="">
+                <span class="material-symbols-outlined icon">person</span>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="material-symbols-outlined icon">logout</span>
+                <span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--=== Top bar end ===-->
+
+      <section>
+        <!--=== Add Product ===-->
+        <div class="add_product p-5 w-100">
+          <h2 class="page-title">Add Product <span></span></h2>
+          <form action="" method="post">
+            <div class="">
+                <div class="input-grp">
+                  <label for="p_name">Product name</label>
+                  <input type="text" id="p_name" name="p_name" class="" placeholder="Enter product name">
+                </div>
+                
+                <div class="input-grp">
+                  <label for="p_stock">Product stock</label>
+                  <input type="number" id="p_stock" name="p_stock" class="" placeholder="Enter stock ammout">
+                </div>
+                
+                <div class="input-grp">
+                  <label for="p_category">Product category</label>
+                  <select name="p_category" class="p-2" aria-label="Default select example">
+                    <option selected>Select category</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+
+                <div class="input-grp">
+                  <label for="p_price">Product price</label>
+                  <input type="number" id="p_price" name="p_price" class="" placeholder="Enter product price">
+                </div>
+
+                <div class="input-grp">
+                  <label for="p_location">Product location</label>
+                  <input type="text" id="p_location" name="p_location" class="" placeholder="Enter product location">
+                </div>
+                
+                <div class="input-grp">
+                  <label for="p_brand">Product brand</label>
+                  <input type="text" id="p_brand" name="p_brand" class="" placeholder="Enter product brand">
+                </div>
+                
+                <div class="input-grp">
+                  <label for="p_model">Product model</label>
+                  <input type="number" id="p_model" name="p_model" class="" placeholder="Enter product model number">
+                </div>
+                
+                <div class="input-grp">
+                  <label for="p_img">Product image</label>
+                  <input type="file" id="p_img" name="p_img" class="">
+                </div>
+
+                <div class="input-grp">
+                  <label for="">Description</label>
+                  <textarea class="p-3" rows="5" placeholder="Enter description for this product"></textarea>              
+                </div>
+
+                <div class="myBtn text-center mt-5">
+                  <button><a href="">Save Product</a></button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- <div class="top_scroller_div">
+        <span class="material-symbols-outlined top_scroller">arrow_upward</span>
+      </div> -->
+  </section>
+  <!--=== Main end ===-->
+
+
+  <script src="./assets/js/jquery-v3.6.1.js"></script>
+  <script src="./assets/js/bootstrap_js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+
+  <script src="./assets/js/custome.js"></script>
+  <script src="./assets/js/custome_jquery.js"></script>
+  <script src="./assets/js/chart.js"></script>
+</body>
+</html>

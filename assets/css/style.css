@@ -1,0 +1,327 @@
+/*====== custome scroll bar start ======*/
+::-webkit-scrollbar {
+	width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+/*	background: linear-gradient(165deg, rgba(0,0,0,0.9360119047619048) 0%, rgba(0,0,0,0.5662640056022409) 100%);*/
+    background: var(--dark-80);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-50);
+}
+/*_______ custome scroll bar end _______*/
+
+/*_______ Login page start _______*/
+.login .item {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login .input-grp, .login form {
+    width: 100%;
+}
+.login .item .card {
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    cursor: default;
+}
+.login .myBtn a {
+    color: var(--light-50);
+}
+.login .pass {
+    position: relative;
+}
+.login .input-grp .pass-toggle {
+    color: var(--light-50);
+    top: 35%;
+    right: 0;
+    position: absolute;
+}
+.login .input-grp .pass-toggle {
+    cursor: pointer;
+}
+.login .input-grp .pass-toggle #show {
+    display: none;
+}
+/*_______ Login page end _______*/
+
+
+/*_______ side bar start _______*/
+.sidebar {
+    background: var(--dark-80);
+/*    width: 260px;*/
+    width: 19rem;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: var(--main-transition);
+    z-index: 100;
+}
+.sidebar.active {
+    width: 19rem;
+}
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+.sidebar ul li .brand {
+    display: flex;
+    align-items: center;
+/*    justify-content: center;*/
+    font-size: 2.3rem;
+    color: var(--main-clr);
+    font-weight: 700;
+    padding: 1rem 0rem 2.5rem 0.5rem;
+    pointer-events: none;
+}
+.sidebar ul li .brand .icon {
+    font-size: 2.9rem;
+    margin-right: 15px;
+}
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    /*    font-size: 1.15rem;*/
+    cursor: pointer;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    transition: var(--main-transition);
+}
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    color: var(--main-clr);
+    background: var(--dark-100);
+    transform: translateX(0.4rem);
+}
+.sidebar ul li a .icon {
+    margin-right: 15px;
+}
+.sidebar ul li a .right-icon {
+    right: 10%;
+    position: absolute;
+    transition: var(--main-transition);
+}
+.sidebar ul li a .right-icon.active {
+    transform: rotateZ(90deg);
+}
+.sidebar .dropdown .dropdown-item {
+    height: 0;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+.sidebar .dropdown .dropdown-item.active {
+    height: 8rem;
+}
+.sidebar .dropdown .dropdown-item li a {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 4rem;
+}
+/*_______ side bar end _______*/
+
+
+/*_______ Main start _______*/
+.main {
+    background: var(--dark-100);
+/*    width: calc(100% - 260px);*/
+    width: calc(100% - 19rem);
+    height: 100%;
+    top: 0;
+    left: 19rem;
+    position: absolute;
+    transition: var(--main-transition);
+    overflow-x: hidden;
+}
+.main.active {
+    width: calc(100% - 19rem);
+    left: 19rem;
+}
+/*_______ top bar start _______*/
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark-80);
+    padding: 1rem 2rem 1rem 0;
+    box-shadow: var(--box-shadow-1);
+    z-index: 99;
+}
+.topbar .toggle {
+    display: none;
+}
+.topbar .toggle .icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.topbar .search-bar {
+    width: 100%;
+    padding: 0 3rem;
+}
+.topbar .search-bar label {
+    width: 100%;
+    position: relative;
+}
+.topbar .search-bar label input {
+    font-size: 1.15rem;
+    color: var(--light-50);
+    width: 100%;
+    background: transparent;
+    border: 2px solid var(--dark-50);
+    border-radius: 20px;
+    outline: none;
+    padding: 0.5rem 3rem;
+}
+.topbar .search-bar label .icon {
+    top: 22%;
+    left: 1.5%;
+    position: absolute;
+}
+.topbar .right img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 0 10px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-50);
+    cursor: pointer;
+}
+.topbar .profile {
+    position: relative;
+}
+.topbar .profile ul {
+    width: 130px;
+    height: 0;
+    overflow: hidden;
+    background: var(--dark-50);
+    position: absolute;
+    top: 138%;
+    right: 0;
+    transition: var(--main-transition);
+    z-index: 98;
+}
+.topbar .profile ul.active {
+    height: 8rem;
+}
+.topbar .profile ul li a {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: var(--main-transition);
+}
+.topbar .profile ul li a:hover {
+    color: var(--main-clr);
+    transform: translateX(0.5rem);
+}
+/*_______ top bar end _______*/
+/*_______ Main end _______*/
+
+
+/*_______ content start _______*/
+.topcard {
+    z-index: 97;
+}
+.topcard .item .card {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+}
+.topcard .item .card:hover {
+    box-shadow: var(--box-shadow-3);
+}
+.topcard .left .icon {
+    font-size: 2rem;
+    font-weight: 700;
+    border: 3px solid var(--light-50);
+    border-radius: 50%;
+    padding: 0.7rem;   
+}
+.topcard .item:nth-child(1) .card .icon {
+    background: var(--orrange);
+}
+.topcard .item:nth-child(2) .card .icon {
+    background: var(--green);
+}
+.topcard .item:nth-child(3) .card .icon {
+    background: var(--main-clr);
+}
+.topcard .right p {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.topcard .right p:nth-child(1) {
+    color: var(--light-50);
+    font-size: 1rem;
+}
+.topcard .item:nth-child(1) .card p:nth-child(2) {
+    color: var(--orrange);
+}
+.topcard .item:nth-child(2) .card p:nth-child(2) {
+    color: var(--green);
+}
+.topcard .item:nth-child(3) .card p:nth-child(2) {
+    color: var(--main-clr);
+}
+
+
+.latest-order .table {
+    color: var(--light-50);
+}
+.latest-order .table thead {
+    background: var(--dark-80);
+}
+.latest-order .table th, .table td {
+    border: 1px solid var(--dark-50) !important;
+    padding: 1.5rem;
+}
+.latest-order .table .status button{
+    font-size: 0.9rem;
+    color: var(--light-100);
+    padding: 0.1rem 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.graphbox {
+    position: relative;
+}
+.graphbox .row .item .card {
+    position: relative;
+    color: var(--light-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+/*_______ content end _______*/
+
+
+.top_scroller {
+    color: #fff;
+    background: #444444;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    right: 2%;
+    bottom: 2%;
+    position: fixed;
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(0);
+}
+
+.top_scroller.fa_solid_viewer {
+    transform: scale(1);
+}

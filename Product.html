@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <!--==== css link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/sass.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/product.css">
+  <!--==== bootstrap link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap_css/bootstrap.min.css">
+  <!--==== font awesome link ====-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/all.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/regular.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/font_awesome/fontawesome.css">
+  <!--=== Google icon ===-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body class="">
+  <!--=== side bar start start ===-->
+  <section class="sidebar">
+    <ul>
+      <li>
+        <a href="" class="brand">
+          <span class="material-symbols-outlined icon">sentiment_satisfied</span>
+          <span>Admin</span>
+        </a>
+      </li>
+      <li><a href="" class="active"> 
+          <span class="material-symbols-outlined icon">team_dashboard</span> Dashboard</a>
+      </li>
+
+      <li class="dropdown"><a>
+        <span class="material-symbols-outlined icon">inventory_2</span> Products <span class="material-symbols-outlined right-icon">expand_more</span></a>
+        <ul class="dropdown-item">
+          <li><a href="Add_products.html">
+            <span class="material-symbols-outlined icon">add</span> Add Products
+          </a></li>
+          <li><a href="Product.html">
+            <span class="material-symbols-outlined icon">preview</span> Preview
+          </a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown"><a> 
+        <span class="material-symbols-outlined icon">shopping_cart</span> Orders <span class="material-symbols-outlined right-icon">expand_more</span></a>
+        <ul class="dropdown-item">
+          <li><a href="">
+            <span class="material-symbols-outlined icon">add</span> Recent Orders
+          </a></li>
+          <li><a href="">
+            <span class="material-symbols-outlined icon">update</span> Pending Orders
+          </a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown"><a> 
+        <span class="material-symbols-outlined icon">group</span> Customers <span class="material-symbols-outlined right-icon">expand_more</span></a>
+        <ul class="dropdown-item">
+          <li><a href="">
+            <span class="material-symbols-outlined icon">add</span> New Customers
+          </a></li>
+          <li><a href="">
+            <span class="material-symbols-outlined icon">language</span> Regular Customers
+          </a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown"><a> 
+        <span class="material-symbols-outlined icon">monitoring</span> Statistics <span class="material-symbols-outlined right-icon">expand_more</span></a>
+        <ul class="dropdown-item">
+          <li><a href="">
+            <span class="material-symbols-outlined icon">sell</span> Sell
+          </a></li>
+          <li><a href="">
+            <span class="material-symbols-outlined icon">account_balance</span> Earn
+          </a></li>
+        </ul>
+      </li>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">reviews</span> Reviews</a>
+      </li>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">payments</span> Transactions</a>
+      </li>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">sell</span> Hot offers</a>
+      </li>
+
+      <hr>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">brush</span> Appearance <span class="material-symbols-outlined right-icon">expand_more</span></a>
+      </li>
+
+      <li><a href=""> 
+          <span class="material-symbols-outlined icon">settings</span> Settings</a>
+      </li>
+    </ul>
+  </section>
+  <!--=== side bar start end ===-->
+
+  <!--=== Main start ===-->
+  <section class="main">
+    <!--=== Top bar start ===-->
+    <section class="topbar sticky-top ">
+      <div class="toggle">
+        <span class="material-symbols-outlined icon">menu</span>
+      </div>
+      <div class="search-bar">
+        <label>
+          <input type="text" name="search" placeholder="Search here">
+          <span class="material-symbols-outlined icon">search</span>
+        </label>
+      </div>
+      <div class="right d-flex aligns-center">
+        <span class="material-symbols-outlined icon" style="cursor:pointer;padding: 0 10px 0 10px;">sms</span>
+        <span class="material-symbols-outlined icon" style="cursor:pointer;padding: 0 10px 0 10px;">notifications</span>
+        <div class="profile d-flex aligns-center">
+          <img src="assets/images/user-avater.png">
+          <ul>
+            <li>
+              <a href="">
+                <span class="material-symbols-outlined icon">person</span>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="material-symbols-outlined icon">logout</span>
+                <span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--=== Top bar end ===-->
+
+    <!--=== Preview start ===-->
+    <section class="product px-4 py-3">
+      <h2 class="page-title">Preview Products <span></span></h2>
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-4 col-xl-3 mt-5">
+          <a href="" class="nav-link">
+            <div class="card">
+              <img src="assets\images\Digital_drawing_pad.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">8.5" LCD Writing Tablet Drawing Pad...</h5>
+                <p class="card_store_name">>> Shovon Enterprise</p>
+                <p class="card_price"><i class="fa-solid fa-bangladeshi-taka-sign mx-3"></i>4000000</p>
+                <div class="ratting mb-2">Rattings : 
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-xl-3 mt-5">
+          <a href="" class="nav-link">
+            <div class="card">
+              <img src="assets\images\1761878760320634_product-1.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Apple air pod (Black)</h5>
+                <p class="card_store_name">>> Shovon Enterprise</p>
+                <p class="card_price"><i class="fa-solid fa-bangladeshi-taka-sign mx-3"></i>1050</p>
+                <div class="ratting mb-2">Rattings : 
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-xl-3 mt-5">
+          <a href="" class="nav-link">
+            <div class="card">
+              <img src="assets\images\1761878977586038_rols_royce.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Rols Royce </h5>
+                <p class="card_store_name">>> Shovon Enterprise</p>
+                <p class="card_price"><i class="fa-solid fa-bangladeshi-taka-sign mx-3"></i>4000000</p>
+                <div class="ratting mb-2">Rattings : 
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-4 col-xl-3 mt-5">
+          <a href="" class="nav-link">
+            <div class="card">
+              <img src="assets\images\1761878760320634_product-1.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Apple air pod (Black)</h5>
+                <p class="card_store_name">>> Shovon Enterprise</p>
+                <p class="card_price"><i class="fa-solid fa-bangladeshi-taka-sign mx-3"></i>1050</p>
+                <div class="ratting mb-2">Rattings : 
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-xl-3 mt-5">
+          <a href="" class="nav-link">
+            <div class="card">
+              <img src="assets\images\1761878977586038_rols_royce.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Rols Royce </h5>
+                <p class="card_store_name">>> Shovon Enterprise</p>
+                <p class="card_price"><i class="fa-solid fa-bangladeshi-taka-sign mx-3"></i>4000000</p>
+                <div class="ratting mb-2">Rattings : 
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-xl-3 mt-5">
+          <a href="" class="nav-link">
+            <div class="card">
+              <img src="assets\images\1761878760320634_product-1.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Apple air pod (Black)</h5>
+                <p class="card_store_name">>> Shovon Enterprise</p>
+                <p class="card_price"><i class="fa-solid fa-bangladeshi-taka-sign mx-3"></i>1050</p>
+                <div class="ratting mb-2">Rattings : 
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-xl-3 mt-5">
+          <a href="" class="nav-link">
+            <div class="card">
+              <img src="assets\images\1761878977586038_rols_royce.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Rols Royce </h5>
+                <p class="card_store_name">>> Shovon Enterprise</p>
+                <p class="card_price"><i class="fa-solid fa-bangladeshi-taka-sign mx-3"></i>4000000</p>
+                <div class="ratting mb-2">Rattings : 
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-4 col-xl-3 mt-5">
+          <a href="" class="nav-link">
+            <div class="card">
+              <img src="assets\images\1761878760320634_product-1.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Apple air pod (Black)</h5>
+                <p class="card_store_name">>> Shovon Enterprise</p>
+                <p class="card_price"><i class="fa-solid fa-bangladeshi-taka-sign mx-3"></i>1050</p>
+                <div class="ratting mb-2">Rattings : 
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!--=== Preview end ===-->
+
+
+      <div class="top_scroller_div">
+        <span class="material-symbols-outlined top_scroller">arrow_upward</span>
+      </div>
+  </section>
+  <!--=== Main end ===-->
+
+
+  <script src="./assets/js/jquery-v3.6.1.js"></script>
+  <script src="./assets/js/bootstrap_js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+
+  <script src="./assets/js/custome.js"></script>
+  <script src="./assets/js/custome_jquery.js"></script>
+  <script src="./assets/js/chart.js"></script>
+</body>
+</html>
